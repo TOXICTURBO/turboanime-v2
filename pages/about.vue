@@ -39,7 +39,7 @@ useHead({
           <v-btn
             color="blue-darken-1"
             prepend-icon="mdi-file-document"
-            href="https://amvdocs.pages.dev"
+            href="https://turboanime.xyz"
           >
             Documentation
           </v-btn>
