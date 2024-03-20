@@ -17,7 +17,6 @@ useHead({
 </script>
 
 <template>
-  <PgCompsLandingPage />
   <PopupMessage />
 </template> 
 
