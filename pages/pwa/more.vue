@@ -13,7 +13,7 @@
       <h1>More</h1>
     </div>
     <v-list lines="two">
-      <v-list-item title="TurboAnime's PWA mode" subtitle="Version amvN3 (Nuxt 3)">
+      <v-list-item title="TurboAnime's PWA mode" subtitle="Version V2 (Next V3)">
         <template #prepend>
           <img
             src="/icon.png"
@@ -34,7 +34,7 @@
       <v-list-item
         title="Help"
         target="blank"
-        href="https://docs.amvstr.ml/help"
+        href="turboanime.xyz"
       >
         <template #append>
           <v-icon icon="mdi-help" />
