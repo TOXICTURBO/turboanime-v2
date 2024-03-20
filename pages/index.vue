@@ -22,7 +22,7 @@ useHead({
 </template> 
 
 <script>
-import PopupMessage from './components/popup.vue';
+import PopupMessage from '~/components/popup.vue';
 
 export default {
   components: {
