@@ -245,7 +245,7 @@ const clearData = () => {
           </v-list>
           <v-card-actions>
             <v-btn
-              href="https://docs.amvstr.me/help/bookmark#cloud-integration"
+              href="turboanime.xyz"
             >
               Help ?
             </v-btn>
@@ -277,7 +277,7 @@ const clearData = () => {
             <v-list-item title="Configure Cloud" @click="cfg_dialog = true" />
             <v-list-item
               title="Help"
-              href="https://docs.amvstr.me/help/bookmark"
+              href="turboanime.xyz"
             />
           </v-list>
         </v-menu>
