@@ -17,7 +17,8 @@
         <template #prepend>
           <img
             src="/icon.png"
-            style="display: flex; width: 100px; height: 100%"
+            class="mr-3"
+            style="width: 100px; height: 100%;"
           />
         </template>
       </v-list-item>
@@ -29,12 +30,13 @@
     <v-divider class="my-4"></v-divider>
     <v-list lines="two">
       <v-list-item title="Web Mode" append-icon="mdi-web" to="/"></v-list-item>
-      <v-list-item title="About us" target="blank" href="/about" />
-      <v-list-item title="Privacy Policy" target="blank" href="/privacy" />
+      <v-list-item title="About us" target="_blank" href="/about" rel="noopener noreferrer" />
+      <v-list-item title="Privacy Policy" target="_blank" href="/privacy" rel="noopener noreferrer" />
       <v-list-item
         title="Help"
-        target="blank"
-        href="turboanime.xyz"
+        target="_blank"
+        href="https://turboanime.xyz"
+        rel="noopener noreferrer"
       >
         <template #append>
           <v-icon icon="mdi-help" />
@@ -42,8 +44,9 @@
       </v-list-item>
       <v-list-item
         title="Github"
-        target="blank"
+        target="_blank"
         href="https://github.com/TurboAnime/TurboAnime"
+        rel="noopener noreferrer"
       >
         <template #append>
           <v-icon icon="mdi-github" />
