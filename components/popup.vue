@@ -10,8 +10,7 @@
     </div>
     
     <!-- Your website content goes here -->
-    <!-- For demonstration purposes, let's just add a button to open the pop-up -->
-    <button @click="openPopup">Open Pop-up Message</button>
+    <!-- For demonstration purposes, let's just add a button to open the pop-up --
   </div>
 </template>
 
@@ -19,7 +18,7 @@
 export default {
   data() {
     return {
-      showPopup: false
+      showPopup: true
     };
   },
   methods: {
