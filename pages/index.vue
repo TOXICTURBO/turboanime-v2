@@ -18,6 +18,18 @@ useHead({
 
 <template>
   <PgCompsLandingPage />
+  <PopupMessage />
 </template> 
+
+<script>
+import PopupMessage from './components/popup.vue';
+
+export default {
+  components: {
+    PopupMessage
+  },
+  // Other options and methods for your main app component
+}
+</script>
 
 <style></style>
