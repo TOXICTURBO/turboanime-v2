@@ -493,7 +493,7 @@ useHead({
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: admin@amvstr.ml</li>
+        <li>By email: turbobusiness@gmail.com</li>
       </ul>
     </div>
   </v-container>
