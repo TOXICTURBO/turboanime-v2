@@ -43,6 +43,8 @@
     "posthog-js": "^1.58.0",
     "sharp": "^0.33.0",
     "vue-disqus": "^5.1.0",
-    "vuetify": "^3.4.4"
+    "vuetify": "^3.4.4",
+    "vuetify-nuxt-module": "^0.5.13",
+    "@vuetify/loader-shared": "^2.0.3"
   }
 }
