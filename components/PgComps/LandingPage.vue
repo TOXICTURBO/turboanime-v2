@@ -276,6 +276,7 @@ const {
 </template>
 
 <style>
+/* Improve readability and organization */
 .loadingBlock {
   height: 200px;
   display: grid;
@@ -286,38 +287,54 @@ const {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  gap: 1rem;
 }
 
+/* Enhance scrolling behavior and aesthetics */
 .media-scrolling {
-  --_spacer: 0.6rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  --spacer: 0.6rem;
+  margin: 0.5rem;
   display: grid;
   grid-auto-flow: column;
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(--_spacer, 1rem);
+  overscroll-behavior: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding: var(--spacer);
 }
 
+/* Ensure items snap neatly during scrolling */
 .media-scrolling > * {
   scroll-snap-align: start;
 }
 
+/* Optimize layout for larger screens */
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
+/* Improve visual appeal and adjust layout */
 .carousel-item {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 1.5rem;
   height: 320px;
-  gap: 1rem;
+}
+
+/* Fine-tune appearance and responsiveness */
+@media (min-width: 992px) {
+  .carousel-item {
+    padding: 2rem;
+  }
+}
+
+/* Enhance readability and optimize for accessibility */
+@media (min-width: 1200px) {
+  .carousel-item {
+    padding: 2.5rem;
+  }
 }
 </style>
