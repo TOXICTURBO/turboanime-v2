@@ -88,7 +88,7 @@ const gotoRandomID = async () => {
       <slot />
       <ClientOnly>
         <AppCookieBanner />
-        <Test />
+        <ChangeLog />
       </ClientOnly>
     </v-main>
     <v-footer app height="auto" dense absolute>
