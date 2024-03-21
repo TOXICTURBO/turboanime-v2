@@ -5,7 +5,7 @@
     color="#2A3B4D"
     icon="mdi-cookie"
     title="New Update"
-    text="We have a new update"
+    text="We have new update"
   >
     <template #default>
       <br />
@@ -17,7 +17,7 @@
       >
         Close
       </v-btn>
-        <v-btn class="my-2" color="green" @click="closePopup"> Changelog </v-btn>
+      <v-btn class="my-2" color="green" @click="openChangelog"> Changelog </v-btn>
     </template>
   </v-alert>
 </template>
@@ -27,12 +27,16 @@ export default {
   data() {
     return {
       showban: true,
-      changelogPath: '/components/changelog.vue', // Change this to your desired path
     };
   },
   methods: {
     closePopup() {
       this.showban = false;
+    },
+    openChangelog() {
+      // Navigate to the changelog page directly
+      window.location.href = '/components/changelog'; // Change this to your desired path
+      this.closePopup(); // Close the popup after navigating
     },
   },
 };
