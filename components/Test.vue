@@ -1,41 +1,3 @@
-<script>
-import { useStorage } from "@vueuse/core";
-export default {
-  data() {
-    return {
-      lStorage: useStorage("site-setting", {
-        allowCookies: true,
-      }),
-      showban: true,
-    };
-  },
-  mounted() {
-    const { $posthog } = useNuxtApp();
-    if (!useRuntimeConfig().public.posthogPublicKey || useRuntimeConfig().public.posthogPublicKey == '') {
-      this.showban = true;
-    }
-    this.showban =
-      !(
-        $posthog().has_opted_out_capturing() ||
-        $posthog().has_opted_in_capturing()
-      ) || true;
-  },
-  methods: {
-    doNottrkfn() {
-      const { $posthog } = useNuxtApp();
-      this.lStorage.allowCookies = false;
-      this.showban = false;
-      $posthog().opt_out_capturing();
-    },
-
-    doTrkfn() {
-      const { $posthog } = useNuxtApp();
-      this.showban = false;
-      $posthog().opt_in_capturing();
-    },
-  },
-};
-</script>
 <template>
   <v-alert
     v-show="showban"
@@ -51,11 +13,28 @@ export default {
         class="my-2 mr-1"
         variant="outlined"
         color="red"
-        @click="doNottrkfn"
+        @click="closePopup"
       >
         Close
       </v-btn>
-      <v-btn class="my-2" color="green" @click="doTrkfn"> Changelog </v-btn>
+      <router-link :to="{ name: 'changelog' }">
+        <v-btn class="my-2" color="green" @click="closePopup"> Changelog </v-btn>
+      </router-link>
     </template>
   </v-alert>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      showban: true,
+    };
+  },
+  methods: {
+    closePopup() {
+      this.showban = false;
+    },
+  },
+};
+</script>
