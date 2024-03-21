@@ -3,19 +3,23 @@
     <h1>Changelog</h1>
     <p>Here are the latest updates:</p>
     <ul>
-      <li>Update 1</li>
-      <li>Update 2</li>
-      <!-- Add more updates as needed -->
+      <li v-for="(update, index) in updates" :key="index">{{ update }}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  // You can add any specific logic or data for your changelog page here
+  props: {
+    updates: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
 
 <style scoped>
 /* You can add scoped styles specific to this page if needed */
 </style>
+
