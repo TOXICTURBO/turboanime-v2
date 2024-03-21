@@ -7,18 +7,6 @@
     title="New Update"
     text="We have new update"
   >
-    <template #default>
-      <br />
-      <v-btn
-        class="my-2 mr-1"
-        variant="outlined"
-        color="red"
-        @click="closePopup"
-      >
-        Close
-      </v-btn>
-      <v-btn class="my-2" color="green" @click="openChangelog"> Changelog </v-btn>
-    </template>
   </v-alert>
 </template>
 
@@ -33,11 +21,16 @@ export default {
     closePopup() {
       this.showban = false;
     },
-    openChangelog() {
-      // Navigate to the changelog page directly
-      window.location.href = '/Changelog'; // Change this to your desired path
-      this.closePopup(); // Close the popup after navigating
+    // Method to close the popup after a delay
+    closePopupAfterDelay() {
+      setTimeout(() => {
+        this.closePopup();
+      }, 5000); // Close after 5 seconds (adjust as needed)
     },
+  },
+  mounted() {
+    // Automatically close the popup after a delay
+    this.closePopupAfterDelay();
   },
 };
 </script>
