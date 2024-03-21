@@ -4,8 +4,8 @@
     style="position: fixed; bottom: 2.5rem; margin: auto 1.5rem; z-index: 1005"
     color="#2A3B4D"
     icon="mdi-cookie"
-    title="New Update"
-    text="We have new update"
+    title="By TeamToxic"
+    text="We Are Back Finally With Turbo Api V2 ❤️‍🩹"
   >
   </v-alert>
 </template>
