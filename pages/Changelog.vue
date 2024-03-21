@@ -25,7 +25,7 @@ useHead({
 </template>
 
 <script>
-import Changelog from '@/components/Changelog.vue'; // Adjust the path as needed
+import Changelog from '/components/Changelog.vue'; // Adjust the path as needed
 
 export default {
   components: {
