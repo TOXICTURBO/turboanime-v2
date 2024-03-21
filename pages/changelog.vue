@@ -1,3 +1,23 @@
+<script setup>
+useSeoMeta({
+  ogTitle: `Changelog`,
+  ogDescription: `Changelog`,
+  ogImage: "",
+  ogUrl: useRoute().fullPath,
+  twitterTitle: `Changelog`,
+  twitterDescription: `Changelog`,
+  twitterImage: "",
+  twitterCard: "summary",
+});
+
+useHead({
+  htmlAttrs: {
+    lang: "en",
+  },
+  title: "Changelog",
+});
+</script>
+
 <template>
   <div>
     <Changelog :updates="changelogUpdates" />
