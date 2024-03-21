@@ -24,13 +24,13 @@ export default {
     doNottrkfn() {
       const { $posthog } = useNuxtApp();
       this.lStorage.allowCookies = false;
-      this.showban = true;
+      this.showban = false;
       $posthog().opt_out_capturing();
     },
 
     doTrkfn() {
       const { $posthog } = useNuxtApp();
-      this.showban = true;
+      this.showban = false;
       $posthog().opt_in_capturing();
     },
   },
@@ -42,8 +42,8 @@ export default {
     style="position: fixed; bottom: 2.5rem; margin: auto 1.5rem; z-index: 1005"
     color="#2A3B4D"
     icon="mdi-cookie"
-    title="We use cookies!"
-    text="We use cookies and other tracking technologies to improve your browsing experience on our website, to analyze our website traffic, and to understand where our visitors are coming from."
+    title="New Update"
+    text="We have new update"
   >
     <template #default>
       <br />
@@ -53,9 +53,9 @@ export default {
         color="red"
         @click="doNottrkfn"
       >
-        Disagree
+        Close
       </v-btn>
-      <v-btn class="my-2" color="green" @click="doTrkfn"> Agree ! </v-btn>
+      <v-btn class="my-2" color="green" @click="doTrkfn"> Changelog </v-btn>
     </template>
   </v-alert>
 </template>
