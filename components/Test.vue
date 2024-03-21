@@ -35,7 +35,7 @@ export default {
     },
     openChangelog() {
       // Navigate to the changelog page directly
-      window.location.href = '/pages/changelog'; // Change this to your desired path
+      window.location.href = '/pages/Changelog'; // Change this to your desired path
       this.closePopup(); // Close the popup after navigating
     },
   },
