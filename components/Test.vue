@@ -5,7 +5,7 @@
     color="#2A3B4D"
     icon="mdi-cookie"
     title="New Update"
-    text="We have new update"
+    text="We have a new update"
   >
     <template #default>
       <br />
@@ -17,9 +17,7 @@
       >
         Close
       </v-btn>
-      <router-link :to="{ name: 'changelog' }">
         <v-btn class="my-2" color="green" @click="closePopup"> Changelog </v-btn>
-      </router-link>
     </template>
   </v-alert>
 </template>
@@ -29,6 +27,7 @@ export default {
   data() {
     return {
       showban: true,
+      changelogPath: '/components/changelog.vue', // Change this to your desired path
     };
   },
   methods: {
