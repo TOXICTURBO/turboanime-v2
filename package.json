@@ -31,7 +31,7 @@
     "prettier": "^2.8.8",
     "vite-plugin-pwa": "^0.16.4",
     "vue-eslint-parser": "^9.2.1",
-    "vuetify-nuxt-module": "^0.12.0",
+    "vuetify-nuxt-module": "^0.12.0"
   },
   "dependencies": {
     "artplayer": "^5.0.4",
