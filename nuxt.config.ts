@@ -104,6 +104,7 @@ export default defineNuxtConfig({
     "@vite-pwa/nuxt",
     "@vueuse/nuxt",
     "nuxt-disqus",
+    "vuetify-nuxt-module",
     "@nuxt/image",
   ],
   disqus: {
