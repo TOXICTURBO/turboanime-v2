@@ -30,7 +30,8 @@
     "nuxt-disqus": "^1.0.1",
     "prettier": "^2.8.8",
     "vite-plugin-pwa": "^0.16.4",
-    "vue-eslint-parser": "^9.2.1"
+    "vue-eslint-parser": "^9.2.1",
+    "vuetify-nuxt-module": "^0.5.13"
   },
   "dependencies": {
     "artplayer": "^5.0.4",
@@ -43,8 +44,6 @@
     "posthog-js": "^1.58.0",
     "sharp": "^0.33.0",
     "vue-disqus": "^5.1.0",
-    "vuetify": "^3.4.4",
-    "vuetify-nuxt-module": "^0.5.13",
-    "@vuetify/loader-shared": "^2.0.3"
+    "vuetify": "^3.4.4"
   }
 }
