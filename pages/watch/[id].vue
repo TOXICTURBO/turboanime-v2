@@ -8,23 +8,6 @@ const getEP = getGogoID.split(`-episode-`)[1];
 
 const loadSettingDialog = ref(false);
 const switchtobackup = ref(false);
-const episode_dialog = ref(false);
-const infotab = ref(null);
-const ep_tab = ref(null);
-const selectedProvider = ref("Gogoanime");
-
-const {
-  data: anime,
-  pending: aniPending,
-  error: aniError,
-} = await useFetch(
-  `${env.public.API_URL}/api/${env.public.version}/info/${
-    useRoute().params.id
-  }`,
-  {
-    cache: "force-cache",
-  }
-);
 
 const { data: anime } = await useFetch(
   `${env.public.API_URL}/api/${env.public.version}/info/${getID}`,
@@ -343,80 +326,6 @@ function getInstance(art) {
 }
 </script>
 
-const countdown = ref();
-
-const updateCountdown = () => {
-  setInterval(() => {
-    const currentTime = Math.floor(Date.now() / 1000);
-    const remainingTime = anime?.value.nextair?.airingAt - currentTime;
-    countdown.value = formatDuration(remainingTime);
-  }, 1000);
-};
-
-const formatDuration = (duration) => {
-  const days = Math.floor(duration / (60 * 60 * 24));
-  const hours = Math.floor((duration % (60 * 60 * 24)) / (60 * 60));
-  const minutes = Math.floor((duration % (60 * 60)) / 60);
-  const seconds = duration % 60;
-
-  return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
-};
-
-function getAiringDay() {
-  const airingDate = new Date(anime?.value.nextair?.airingAt * 1000);
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const airingDay = daysOfWeek[airingDate.getDay()];
-  return airingDay;
-}
-
-onMounted(() => {
-  updateCountdown();
-});
-
-const { data: recmedAnime, pending: recmedPending } = useFetch(
-  `${env.public.API_URL}/api/${env.public.version}/recommendations/${
-    useRoute().params.id
-  }`,
-  {
-    cache: "force-cache",
-  }
-);
-
-const {
-  data: epAni,
-  pending: loadAni,
-  error: epAniError,
-} = useLazyFetch(
-  `${env.public.API_URL}/api/v1/episode/${
-    anime?.value.id_provider === null ? "''" : anime.value.id_provider.idGogo
-  }`,
-  {
-    cache: "default",
-  }
-);
-const {
-  data: epAniDub,
-  pending: loadAniDub,
-  error: epDubAniError,
-} = useLazyFetch(
-  `${env.public.API_URL}/api/v1/episode/${
-    anime?.value.id_provider === null ? "''" : anime.value.id_provider.idGogoDub
-  }`,
-  {
-    cache: "default",
-  }
-);
-
-const stringInstring = '""';
-</script>
 
 <script>
 export default {
